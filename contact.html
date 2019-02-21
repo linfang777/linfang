@@ -38,12 +38,25 @@
     </div>
     <div class="row menu-item">
         <div class="col-xs-12 pull-right">
+            <a href="javascript:void(0)"><p class="text-right" id="essays_btn" onclick="showEssays()">essays</p></a>
+        </div>
+    </div>
+    <div class="row menu-item">
+        <div class="col-xs-12 pull-right">
             <a href="javascript:void(0)"><p class="text-right" id="about_btn" onclick="showAbout()">about</p></a>
         </div>
     </div>
     <div class="row menu-item">
         <div class="col-xs-12 pull-right">
             <a href="javascript:void(0)"><p class="text-right" id="contact_btn" onclick="showContact()">contact</p></a>
+        </div>
+    </div>
+    <div class="row" id="essays_box">
+        <div class="col-xs-12">
+            <img src="img/essay.0.JPG">
+        </div>
+        <div class="col-xs-12">
+            <img src="img/essay.0.JPG">
         </div>
     </div>
     <div class="row" id="about_box">
@@ -68,13 +81,22 @@
 
     function goBackToIndex() {
         isOnSubPage ? showMenuList() : window.location.href = "index.html"
-        // isOnSubPage ? showMenuList() : window.open('index.html')
+    }
+
+    function showEssays() {
+        isOnSubPage = true;
+        $(".menu-item").hide();
+
+        $("#essays_box").show();
+        $("#about_box").hide();
+        $("#contact_box").hide();
     }
 
     function showAbout() {
         isOnSubPage = true;
         $(".menu-item").hide();
 
+        $("#essays_box").hide();
         $("#about_box").show();
         $("#contact_box").hide();
     }
@@ -83,6 +105,7 @@
         isOnSubPage = true;
         $(".menu-item").hide();
 
+        $("#essays_box").hide();
         $("#about_box").hide();
         $("#contact_box").show();
     }
@@ -91,6 +114,7 @@
         isOnSubPage = false;
         $(".menu-item").show();
 
+        $("#essays_box").hide();
         $("#about_box").hide();
         $("#contact_box").hide();
     }
