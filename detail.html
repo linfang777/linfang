@@ -21,41 +21,48 @@
         <!--头部开始-->
         <div class="row">
             <div class="col-xs-2">
-                <p class="logo">linfang777</p>
+                <a href="index.html"><p class="logo">linfang777</p></a>
             </div>
             <div class="col-xs-2 pull-right">
-                <a href="contact.html"><p class="text-right menu">三</p></a>
+                <a href="index.html"><p class="text-right nav_back">X</p></a>
             </div>
         </div>
         <!--头部结束-->
     </div>
 </nav>
-
-<!--填充图片和文字的地方-->
 <div class="container" id="content">
+    <!--图片开始-->
+    <div class="row" id="img_list_box">
+    </div>
+    <!--图片结束-->
+    <!--尾部文字开始-->
+    <div class="row">
+        <div class="col-lg-12 txt-box">
+        </div>
+    </div>
+    <!--尾部文字结束-->
 </div>
 </body>
 <script>
     // 页面加载完成后
     $(document).ready(function () {
 
+        let grp_index = getParams("grp_index");
+        let imgCount = structure[grp_index];
+
+        console.log("grp_index is: " + grp_index + " imgCount is: " + imgCount);
+
         // 读取 js/config.js 下的图片数量设置，循环向页面添加每组图片
-        $.each(structure, function (grp_index, val) {
+        for (let in_grp_index = 0; in_grp_index < imgCount; in_grp_index++) {
             // 向页面添加图片，图片放在 img/x.x.jpg
-            $("#content").append(
-                '    <div class="row">' +
+            $("#img_list_box").append(
                 '        <div class="img-box col-lg-12">' +
-                '            <a href="detail.html?grp_index=' + grp_index + '"><img src="img/' + grp_index + '.0.JPG"></a>' +
-                '        </div>' +
-                '    </div>' +
-                '    <div class="row">' +
-                '        <div class="col-lg-12 txt-box" id="txt_box_' + grp_index + '">' +
-                '        </div>' +
-                '    </div>'
+                '            <img class="detail-img" src="img/' + grp_index + '.' + in_grp_index + '.JPG">' +
+                '        </div>'
             );
             // 向页面添加文字，文字放在 txt/x.html 下
-            $("#txt_box_" + grp_index).load('txt/' + grp_index + '.html');
-        });
+            $(".txt-box").load('txt/' + grp_index + '.html');
+        }
     })
 </script>
 </html>

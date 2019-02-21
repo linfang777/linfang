@@ -1,0 +1,75 @@
+/*大背景颜色，上边距6%总高度*/
+body {
+    font-family: 黑体, serif;
+    margin: 3% 0;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+/*logo设置*/
+.logo {
+    margin-top: .6vmax;
+    font-size: 2vmax;
+}
+
+/*所有的链接的样式*/
+a {
+    font-family: 黑体, serif;
+    color: #222222;
+}
+
+/*返回按钮样式*/
+.nav_back, .menu {
+    margin-top: 0.4vmax;
+    font-size: 2.3vmax;
+}
+
+/*导航栏颜色*/
+.navbar {
+    background-color: #ffffff
+}
+
+/*图片上下边距及宽度*/
+img {
+    margin: 30px 0;
+    width: 100%;
+}
+
+.detail-img {
+    margin: 0 0;
+}
+
+#img_list_box {
+    padding: 30px 0;
+}
+
+/*文字大小、行高*/
+.txt-box {
+    font-size: 1.2vmax;
+    line-height: 2vmax;
+}
+
+/*屏幕宽度小于966时，去掉图片左右边距*/
+@media screen and (max-width: 966px) {
+    .img-box {
+        padding-left: 0;
+    !important;
+        padding-right: 0;
+    !important;
+    }
+}
+
+.menu-item p {
+    font-size: 3vmax;
+    line-height: 3vmax;
+}
+
+#menu_row_work {
+    margin-top: 8vmax;
+}
+
+#about_box, #contact_box {
+    margin-top: 12vmax;
+    font-size: 2.4vmax;
+    line-height: 1.3vmax;
+}
