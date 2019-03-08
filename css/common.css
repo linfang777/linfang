@@ -1,6 +1,6 @@
 /*大背景颜色，上边距6%总高度*/
 body {
-    font-family: 黑体, serif;
+    font-family: "Arial Narrow", "Arial Unicode MS";
     margin: 3% 0;
     background-color: #ffffff;
     color: #222222;
@@ -10,12 +10,12 @@ body {
 /*返回按钮样式*/
 .logo, .nav_back, .menu {
     margin-top: .5vh;
-    font-size: 3vh;
+    font-size: 2vh;
 }
 
 /*所有的链接的样式*/
 a {
-    font-family: 黑体, serif;
+    font-family: "Arial Narrow", "Arial Unicode MS";
     color: #222222;
 }
 
@@ -58,8 +58,8 @@ img {
 
 /*contact about works 按钮*/
 .menu-item p {
-    font-size: 4vh;
-    line-height: 5vh;
+    font-size: 2vh;
+    line-height: 2vh;
 }
 
 /*works 区域*/
@@ -70,6 +70,6 @@ img {
 /*contact about 区域*/
 #about_box, #contact_box {
     margin-top: 18vh;
-    font-size: 3.5vh;
-    line-height: 2.3vh;
+    font-size: 2vh;
+    line-height: 2vh;
 }
